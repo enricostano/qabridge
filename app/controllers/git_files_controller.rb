@@ -1,17 +1,18 @@
 class GitFilesController < ApplicationController
   skip_before_filter :verify_authenticity_token
-  respond_to :json
 
   def index
-    respond_with GitFile.all
+    @git_files = GitFile.all
+    render json: @git_files
   end
 
   def create
+    puts git_file_params
     @git_file = GitFile.new(git_file_params)
     if @git_file.save
-      respond_with @git_file
+      render json: @git_files
     else
-      respond_with @git_file
+      render json: @git_files
     end
   end
 

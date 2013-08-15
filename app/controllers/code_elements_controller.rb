@@ -2,7 +2,8 @@ class CodeElementsController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
-    render json: CodeElement.all
+    @code_elements = CodeElement.all
+    render json: @code_elements
   end
 
   def create
@@ -10,7 +11,7 @@ class CodeElementsController < ApplicationController
     if @code_element.save
       render json: @code_element
     else
-      render json: @code_element.errors
+      render json: @code_element
     end
   end
 
