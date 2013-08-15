@@ -1,11 +1,6 @@
 class GitFile < ActiveRecord::Base
-  FILETYPES = [ :app, :component, :unit_test, :acceptance_test ]
-
-  validates :filename, :path, :git_repo_id, :filetype, presence: true
-  validates :filetype, inclusion: {
-    in: FILETYPES,
-    message: "%{value} is not a valid file type"
-  }
+  validates :path, :git_repo_id, :code_element_id, presence: true
 
   belongs_to :git_repo
+  belongs_to :code_element
 end

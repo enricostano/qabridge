@@ -11,15 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130814105001) do
+ActiveRecord::Schema.define(version: 20130815101601) do
 
   create_table "git_files", force: true do |t|
-    t.string   "filename",    null: false
-    t.string   "path",        null: false
-    t.string   "filetype",    null: false
+    t.string   "path",            null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "git_repo_id", null: false
+    t.integer  "git_repo_id",     null: false
+    t.integer  "code_element_id", null: false
   end
 
   create_table "git_repos", force: true do |t|
