@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130815102754) do
+ActiveRecord::Schema.define(version: 20130815142850) do
 
   create_table "code_elements", force: true do |t|
-    t.string "name",         null: false
-    t.string "element_type", null: false
+    t.string   "name",         null: false
+    t.string   "element_type", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "git_files", force: true do |t|
