@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use rails-api gem
-gem 'rails-api'
+gem 'rails-api', git: 'https://github.com/rails-api/rails-api.git', branch: 'master'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
