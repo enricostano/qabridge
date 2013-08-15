@@ -8,6 +8,8 @@ Qabridge::Application.routes.draw do
   # Example of regular route:
 post 'git_repos' => 'git_repos#create'
 get  'git_repos' => 'git_repos#index'
+get  'code_elements' => 'code_elements#index'
+post 'code_elements' => 'code_elements#create'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
