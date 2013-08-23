@@ -7,6 +7,7 @@ Qabridge::Application.routes.draw do
 
   # Example of regular route:
 get  'git_repos' => 'git_repos#index'
+post 'git_repos/tree' => 'git_repos#repo_tree'
 post 'git_repos' => 'git_repos#create'
 get  'code_elements' => 'code_elements#index'
 post 'code_elements' => 'code_elements#create'

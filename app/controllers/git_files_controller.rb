@@ -3,12 +3,13 @@ class GitFilesController < ApplicationController
 
   def index
     @git_files = GitFile.all
+
     render json: @git_files
   end
 
   def create
-    puts git_file_params
     @git_file = GitFile.new(git_file_params)
+
     if @git_file.save
       render json: @git_files
     else
